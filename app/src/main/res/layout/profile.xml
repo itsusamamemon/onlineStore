@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:layout_height="wrap_content" android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+                                                   android:background="#ECECEC"
+                                                   android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/cardView2">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:elevation="1dp"
+                android:layout_height="200dp"
+                android:background="@color/colorPrimary">
+
+
+            <TextView
+                    android:text="My Profile"
+                    android:textColor="@color/myWhite"
+                    android:textSize="21dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:id="@+id/textView6" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+            />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <FrameLayout android:elevation="2dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                 android:id="@+id/frameLayout"
+                 app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="70dp"
+                 app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/me"
+                    android:elevation="8dp"
+                    app:civ_shadow_color="#8B000000"
+                    app:civ_border_width="0dp"
+
+                    app:civ_shadow="true"
+                    android:id="@+id/circularImageView"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardView3"
+                    android:elevation="4dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/circularImageView"
+                    app:layout_constraintTop_toTopOf="@+id/circularImageView"
+                    app:layout_constraintVertical_bias="0.81" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" android:layout_marginTop="40dp"
+                    app:layout_constraintHorizontal_bias="1.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    <TextView
+                            android:text="Muhammad Usama"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView11"
+                            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                            app:layout_constraintHorizontal_bias="0.496" android:layout_marginTop="80dp"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+                            android:layout_width="300dp"
+                            android:textSize="12dp"
+                            android:textAlignment="center"
+                            android:textStyle="italic"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView12" android:layout_marginTop="5dp"
+                            app:layout_constraintTop_toBottomOf="@+id/textView11"
+                            app:layout_constraintEnd_toEndOf="@+id/textView11"
+                            app:layout_constraintStart_toStartOf="@+id/textView11"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+    <TextView
+            android:text="My Products"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView16"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/prodRec" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/textView16"
+    />
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/prodSec" app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginBottom="10dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" android:layout_marginTop="10dp"/>
+    <TextView
+            android:text="View More"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView19"
+            app:layout_constraintTop_toTopOf="@+id/textView16"
+            app:layout_constraintBottom_toBottomOf="@+id/textView16" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"/>
+    <TextView
+            android:text="My Favourite"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/prodRec" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginTop="20dp"/>
+    <TextView
+            android:text="View More"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView21"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="@+id/textView20"
+            app:layout_constraintBottom_toBottomOf="@+id/textView20" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
